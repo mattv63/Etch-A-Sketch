@@ -1,0 +1,47 @@
+* {
+  background-color: #e3d7d7;
+}
+
+.outerBoard {
+  margin: auto auto;
+  height: 50%;
+  width: 40%;
+  border: none;
+  padding: 3% 3%;
+  background-color: #ca3232;
+}
+
+.innerBoard {
+  margin; 5% 5%;
+  border: solid;
+  border-width: 1px;
+  height: 600px;
+  width: 600px;
+  position: relative;
+  padding: 0;
+  background-color: white;
+}
+
+.gridSquare {
+  float: left;
+  margin: 0;
+  background-color:white;
+}
+
+.innerBoard::after {
+  content:"";
+  display: table;
+  clear: both;
+}
+
+button {
+  margin-top: -35.3px;
+  margin-left: 15.4%;
+  float: left;
+  position: absolute;
+  background-color: white;
+  font: sans-serif;
+  font-weight: bold;
+  padding: 5px 30px;
+  border: none;
+}

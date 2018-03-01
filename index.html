@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Etch A Sketch</title>
+</head>
+
+<body>
+
+<div class="outerBoard">
+  <button type="button" onclick="resetBoard()">Reset Board</button>
+  <div class="innerBoard">
+  </div>
+</div>
+
+<script>
+  const innerBoard = document.querySelector(".innerBoard");
+  let i = prompt("Enter the size of the board");
+  setBoard(i);
+
+  function setBoard(i){
+      let j = i * i;
+      for (j; j > 0; j--){
+        const gridSquare = document.createElement("div");
+        gridSquare.classList.add("gridSquare");
+        let width = 600/i;
+        gridSquare.style.width = width + "px";
+        gridSquare.style.paddingBottom = width + "px";
+        innerBoard.appendChild(gridSquare);
+
+        gridSquare.onmouseover = function(){
+          this.style.backgroundColor = "black";
+        }
+      }
+  }
+
+  function resetBoard(){
+    var fc = innerBoard.firstChild;
+    while(fc){
+        innerBoard.removeChild(fc);
+        fc = innerBoard.firstChild;
+    }
+    i = prompt("Enter the size of the board");
+    setBoard(i);
+
+  }
+
+
+</script>
+
+</body>
+
+</html>
